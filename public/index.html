@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WhatsApp Messaging App</title>
+    <style>
+        /* General Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            background: #f7f7f7;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            min-height: 100vh;
+            padding: 20px;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            margin-bottom: 30px;
+            color: #333;
+            text-transform: uppercase;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            letter-spacing: 1.5px;
+        }
+
+        /* Menu Icon */
+        .menu {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu-icon {
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            position: relative;
+        }
+
+        .menu-icon::before,
+        .menu-icon::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: #fff;
+            left: 0;
+            transition: 0.3s;
+        }
+
+        .menu-icon::before {
+            top: -6px;
+        }
+
+        .menu-icon::after {
+            top: 6px;
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            display: none;
+            flex-direction: column;
+            padding: 10px 0;
+            width: 200px;
+        }
+
+        .dropdown a {
+            text-decoration: none;
+            color: #333;
+            padding: 10px 20px;
+            display: block;
+            transition: background 0.3s;
+        }
+
+        .dropdown a:hover {
+            background: #f0f0f0;
+        }
+
+        .dropdown a.contact-admin {
+            font-weight: bold;
+            color: #4caf50;
+        }
+
+        .menu.open + .dropdown {
+            display: flex;
+        }
+
+        .card-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            width: 100%;
+            max-width: 600px;
+            margin-top: 20px;
+        }
+
+        .card {
+            position: relative;
+            background: #fff;
+            color: #000;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0px 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        .card img {
+            width: 60px;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.2);
+        }
+
+        .badge {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: #4caf50;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+        }
+
+        .card h2 {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .card p {
+            font-size: 1rem;
+            color: #666;
+            text-align: center;
+        }
+
+        .card button {
+            padding: 12px 20px;
+            background: linear-gradient(90deg, #4caf50, #81c784);
+            color: #fff;
+            border: none;
+            border-radius: 25px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s ease, transform 0.2s ease, box-shadow 0.2s;
+        }
+
+        .card button:hover {
+            background: linear-gradient(90deg, #388e3c, #4caf50);
+            transform: translateY(-3px);
+            box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Menu -->
+    <div class="menu" onclick="toggleMenu()">
+        <div class="menu-icon"></div>
+    </div>
+    <div class="dropdown">
+        <a href="https://wa.me/919354720853" class="contact-admin" target="_blank">Contact Admin on WhatsApp</a>
+    </div>
+
+    <!-- Welcome Section -->
+   <h2>WhatsApp Loader</h2>
+    <!-- Card Section -->
+    <div class="card-container">
+        <div class="card" onclick="window.location.href='http://fi8.bot-hosting.net:20166/'">
+            <span class="badge">New</span>
+            <img src="https://img.icons8.com/ios-filled/100/4caf50/whatsapp.png" alt="WhatsApp Icon">
+            <h2>Pair WhatsApp</h2>
+            <p>Session Data Generat0r And Your WhatsApp Group Uid Finder</p>
+            <button>Login Now</button>
+        </div>
+        <div class="card" onclick="window.location.href='http://us3.bot-hosting.net:21995/'">
+            <span class="badge">Secure</span>
+            <img src="https://img.icons8.com/ios-filled/100/4caf50/upload.png" alt="Loader Icon">
+            <h2>Start Loader</h2>
+            <p>Upload your session data and Automatically Sent Messages.</p>
+            <button>Start Loader</button>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+            const menu = document.querySelector('.menu');
+            const dropdown = document.querySelector('.dropdown');
+            menu.classList.toggle('open');
+            dropdown.style.display = dropdown.style.display === 'flex' ? 'none' : 'flex';
+        }
+    </script>
+</body>
+
+</html>
